@@ -8,10 +8,4 @@ export const buildDevServer = ({ paths, port }: BuildOptions): Configuration => 
   // open: true,
   compress: true,
   historyApiFallback: true, // for react-router
-  proxy: {
-    '/api': {
-      target: 'http://localhost:9000',
-      secure: false,
-    },
-  },
 });
