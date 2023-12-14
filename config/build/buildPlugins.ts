@@ -20,7 +20,7 @@ export const buildPlugins = ({ mode, paths, analyzer, platform }: BuildOptions):
     new WebpackManifestPlugin({}),
     new HtmlWebpackPlugin({
       template: paths.html,
-      favicon: path.resolve(paths.public, 'favicon.ico'),
+      favicon: path.resolve(paths.public, 'favicon.png'),
     }),
   ];
 

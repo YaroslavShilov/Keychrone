@@ -26,22 +26,10 @@ export const buildLoaders = (options: BuildOptions): ModuleOptions['rules'] => {
     },
   };
 
-  const sassLoader = {
-    test: /.s?[a|c]ss$/,
+  const cssLoader = {
+    test: /.css$/,
     exclude: /node_modules/,
-    use: [
-      isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-      {
-        loader: 'css-loader',
-        options: {
-          modules: {
-            localIdentName: isDev ? '[name]__[local]--[hash:base64:5]' : '[hash:base64]',
-          },
-        },
-      },
-      'postcss-loader',
-      'sass-loader',
-    ],
+    use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
   };
 
   const fontsLoader = {
@@ -85,5 +73,5 @@ export const buildLoaders = (options: BuildOptions): ModuleOptions['rules'] => {
     type: 'asset/resource',
   };
 
-  return [jsLoader, tsLoader, sassLoader, fontsLoader, imageLoader];
+  return [jsLoader, tsLoader, cssLoader, fontsLoader, imageLoader];
 };
