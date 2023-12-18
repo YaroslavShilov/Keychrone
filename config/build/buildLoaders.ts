@@ -27,7 +27,7 @@ export const buildLoaders = (options: BuildOptions): ModuleOptions['rules'] => {
   };
 
   const cssLoader = {
-    test: /.css$/,
+    test: /\.css$/,
     exclude: /node_modules/,
     use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
   };
