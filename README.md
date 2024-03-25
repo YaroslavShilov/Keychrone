@@ -4,5 +4,5 @@
 * react-router
 * typescript
 * tailwindcss
+* hero-icons
 * react-loading-skeleton
-* 

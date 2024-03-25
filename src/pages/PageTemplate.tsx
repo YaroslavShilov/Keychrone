@@ -4,7 +4,7 @@ import { Header } from '@/components/Header/Header';
 
 export const PageTemplate = () => {
   return (
-    <div className="py-10">
+    <div className="relative bg-white pt-[80px]">
       <Header />
       <Container>
         <Outlet />
